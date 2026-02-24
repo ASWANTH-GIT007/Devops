@@ -14,7 +14,7 @@ public class HelloController {
         return "Hello World from Aswanth!";
     }
 
-    @Controll
+    @Controller
     @RequestMapping("/welcome")
     public class WelcomeController {
 
