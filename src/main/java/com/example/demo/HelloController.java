@@ -11,10 +11,10 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello World from Spring Boot!";
+        return "Hello World from Aswanth!";
     }
 
-    @Controller
+    @Controll
     @RequestMapping("/welcome")
     public class WelcomeController {
 
