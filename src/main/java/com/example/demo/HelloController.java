@@ -6,21 +6,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
-@RestController
+@Controller
+@RequestMapping("/")
 public class HelloController {
 
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello World from Aswanth!";
+    @GetMapping("hello")
+    public String sayHello(Model model) {
+        model.addAttribute("message", "Hello World from Aswanth!");
+        return "hello";   
     }
 
-    @Controller
-    @RequestMapping("/welcome")
-    public class WelcomeController {
-
-        @GetMapping
-        public String welcome(Model model) {
-            return "forward:/welcome.html";
-        }
+    @GetMapping("welcome")
+    public String welcome(Model model) {
+        return "forward:/welcome.html";
     }
 }
